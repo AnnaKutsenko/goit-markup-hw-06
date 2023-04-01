@@ -551,9 +551,14 @@ img {
 }
 
 
-.footer-subscribe-container {
+/* .footer-subscribe-container {
     margin-left: 80px;
-    margin: 100px 150px 132 ;
+    margin: 100px 150px 132;
+} */
+
+.subscribe-form{
+    margin-left: 80px;
+    margin: 100px 150px 132;
 }
 
 .footer-label-text {
@@ -575,6 +580,7 @@ img {
     display: block;
     align-items: center;
     background-color: #2E2F42;
+    color: #ffffff;
     border: 1px solid #FFFFFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -654,12 +660,14 @@ img {
 .modal-close {
     display: flex;
     margin-left: auto;
+    margin-bottom: 24px;
     border-radius: 50%;
     fill: #2E2F42;
     box-sizing: border-box;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 8px;
+
 } 
 
 .modal-close:hover {
@@ -767,40 +775,87 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+/**------------CHECKBOX------------**/
 
-.input-wrap-checkbox{
-    display: flex;
-    gap: 8px;
-}
-
-.modal-input-checkbox{
+.modal-check{
     width: 16px;
     height: 16px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 2px;
+    /* border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px; */
 }
 
-/* .modal-input-checkbox:focus,
-.modal-input-checkbox:
-{
-    background: #404BBF;
-} */
-
-.modal-checkbox-text{
+.check-text{
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8E8F99;
+    display: flex;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-.modal-checkbox-accent{
+.check-icon{}
+
+.check-text span{
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-check:checked + .check-text span{
+    background-color:#404BBF ;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.modal-check:focus+.check-text span {
+    border-color: #404BBF;
+}
+
+.check-accent{
     color: #4D5AE5;
     text-decoration: underline;
 }
 
-/* .Оригінальний чекбокс про прийняття ліцензійної угоди у формі заявки прихований. «C5» Оформлення «чекбокса» про прийняття ліцензійної угоди зроблено вручну,
-за допомогою векторного зображення галочки з SVG-спрайту.{} */
+/* .check-text:before{
+    width: ;
+    height: ;
+    border-radius: ;
+    border: ;
+    display: block;
+}
+.modal-check:checked + .check-text:before {
+    background-color: ;
+    border: none;
+    background-image: url(../);
+    background-repeat: no-repeat;
+    background-position: center ; 
+}*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
 
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/**---------------------------------**/
 .modal-button-wrap {
     position: relative;
 }
