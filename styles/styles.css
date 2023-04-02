@@ -554,9 +554,10 @@ img {
     margin: 100px 150px 132;
 }
 
-.input-wrap {
+.footer-input-wrap {
     display: flex;
     gap: 24px;
+    margin-top: 16px;
 }
 
 .footer-input {
@@ -723,7 +724,7 @@ img {
 
 .input-wrap{
     position: relative;
-    margin-top: 16px;
+    margin-bottom: 8px;
 }
 
 .modal-input {
